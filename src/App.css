@@ -1,0 +1,162 @@
+.container {
+  margin: 16px;
+  padding: 24px;
+  background-color: #f3f4f6;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+h1 {
+  font-size: 2.25rem;
+  text-align: center;
+  font-weight: 700;
+  color: #333333;
+}
+
+.addTodo {
+  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.addTodo input {
+  width: calc(100% - 100px);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.addTodo input:focus {
+  border-color: #6b46c1;
+  outline: none;
+  box-shadow: 0 0 4px rgba(107, 70, 193, 0.5);
+}
+
+.addTodo select {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  font-size: 1rem;
+}
+
+.addTodo button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #6b46c1;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.addTodo button:disabled {
+  background-color: #e2e8f0;
+  cursor: not-allowed;
+}
+
+.addTodo button:hover {
+  background-color: #5a35b4;
+  transform: scale(1.02);
+}
+
+.todos {
+  margin-top: 24px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 8px 0;
+}
+
+.todo input[type="checkbox"] {
+  margin-right: 12px;
+}
+
+.todo.line {
+  background-color: #e5e7eb; /* Light gray background for Low priority */
+}
+
+.todo.medium {
+  background-color: #d1d5db; /* Medium gray background for Medium priority */
+}
+
+.todo.high {
+  background-color: #fef2f2; /* Light red background for High priority */
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #9ca3af;
+}
+
+.buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.buttons button {
+  background-color: #6b46c1;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #5a35b4;
+  transform: scale(1.02);
+}
+
+.divider {
+  height: 1px;
+  background-color: #333;
+  opacity: 0.15;
+  width: 90%;
+  margin: 16px auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    margin: 10px;
+    padding: 20px;
+  }
+
+  .addTodo input {
+    width: calc(100% - 120px);
+  }
+
+  .addTodo button {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .buttons {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
